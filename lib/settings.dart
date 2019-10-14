@@ -15,14 +15,13 @@ class Settings extends StatelessWidget {
           children: <Widget>[
             RaisedButton(
               child: Text('Logout'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(context, SlideRightRoute(page: LoginPage()));
               },
             ),
-
             RaisedButton(
               child: Text('Update Profile'),
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(context, SlideRightRoute(page: Profile()));
               },
             ),

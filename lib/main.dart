@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'homepage.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      home: LoginPage(),
-      theme: ThemeData.dark(),
-    )
-  );
+  runApp(MaterialApp(
+    home: LoginPage(),
+    theme: ThemeData.dark(),
+  ));
 }
 // TASK - Create navigation paths and screens as shown in the video using namedParameters
 // LoginPage - First Page
@@ -23,7 +21,7 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           child: Text('Go to Home'),
-          onPressed: (){
+          onPressed: () {
             Navigator.push(context, SlideRightRoute(page: HomePage()));
           },
         ),
@@ -36,25 +34,25 @@ class SlideRightRoute extends PageRouteBuilder {
   final Widget page;
   SlideRightRoute({this.page})
       : super(
-    pageBuilder: (
-        BuildContext context,
-        Animation<double> animation,
-        Animation<double> secondaryAnimation,
-        ) =>
-    page,
-    transitionsBuilder: (
-        BuildContext context,
-        Animation<double> animation,
-        Animation<double> secondaryAnimation,
-        Widget child,
-        ) =>
-        SlideTransition(
-          position: Tween<Offset>(
-            begin: const Offset(-1, 0),
-            end: Offset.zero,
-          ).animate(animation),
-          child: child,
-        ),
-  );
+          pageBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+          ) =>
+              page,
+          transitionsBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+            Widget child,
+          ) =>
+              SlideTransition(
+            position: Tween<Offset>(
+                    begin: const Offset(-1, 0),
+                    end: Offset.zero,
+                  )
+                .animate(animation),
+                child: child,
+          ),
+        );
 }
-

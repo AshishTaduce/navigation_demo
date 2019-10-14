@@ -7,13 +7,13 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Navigation')),
       body: Center(
-      child: RaisedButton(
-        color: Colors.blue,
-        child: Text('Back'),
-        onPressed: (){
-          Navigator.pop(context, SlideRightRoute());
-        },
-      ),
+        child: RaisedButton(
+          color: Colors.blue,
+          child: Text('Back'),
+          onPressed: () {
+            Navigator.pop(context, SlideRightRoute());
+          },
+        ),
       ),
     );
   }

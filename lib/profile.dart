@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
 
 class Profile extends StatelessWidget {
   @override
@@ -11,7 +10,7 @@ class Profile extends StatelessWidget {
           color: Colors.blue,
           child: Text('Back'),
           onPressed: () {
-            Navigator.pop(context, SlideRightRoute());
+            Navigator.pop(context);
           },
         ),
       ),

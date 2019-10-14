@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_demo/main.dart';
-import 'settings.dart';
-import 'main.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -14,7 +11,8 @@ class HomePage extends StatelessWidget {
             color: Colors.red,
             child: Text('Settings'),
             onPressed: () {
-              Navigator.push(context, SlideRightRoute(page: Settings()));
+              Navigator.pushNamed(context, '/settings');
+
             },
           ),
         ),

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_demo/main.dart';
-import 'profile.dart';
-import 'main.dart';
 
 class Settings extends StatelessWidget {
   @override
@@ -16,13 +13,15 @@ class Settings extends StatelessWidget {
             RaisedButton(
               child: Text('Logout'),
               onPressed: () {
-                Navigator.push(context, SlideRightRoute(page: LoginPage()));
+                Navigator.pushNamed(context, '/');
+
               },
             ),
             RaisedButton(
               child: Text('Update Profile'),
               onPressed: () {
-                Navigator.push(context, SlideRightRoute(page: Profile()));
+                Navigator.pushNamed(context, '/profile');
+
               },
             ),
           ],
